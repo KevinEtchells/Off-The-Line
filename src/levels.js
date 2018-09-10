@@ -35,7 +35,7 @@ game.LEVELS = [
         ],
         scorers: [
             {location: {path: 0, pos: 0}, points: 1},
-            {location: {path: 1, pos: 500}, points: 2}
+            {location: {path: 1, pos: 500}, points: 3}
         ],
         breaks: [
             /*{location: {path: 1, pos: 250}, stage: 0}*/
@@ -123,6 +123,27 @@ game.LEVELS = [
             {location: {path: 2, pos: 800}, stage: 0}
         ]
     },
+
+    {
+        paths: [
+            {data: "m 1366.994,819.32225 c 194.4055,-108.0719 -160.958,-166.81269 -160.958,-335.71259 0,-168.8999 136.9204,-305.82033 305.8203,-305.82037 168.8999,-2e-5 305.8204,136.92043 305.8204,305.82037 0,168.89994 -155.3157,365.60482 -841.5809,363.30539 -686.26522,-2.29941 -873.77249,-192.10608 -873.77249,-361.00601 -1e-5,-168.89993 136.92044,-305.82038 305.82037,-305.82038 168.89993,-1e-5 305.82039,136.92045 305.82038,305.82038 0,168.89993 -261.08811,243.73655 -62.08385,340.31139", atEnd: {path: 0, pos: 565, reverse: true}, atStart: {path: 0, pos: 425, reverse: true}}
+        ],
+        cells: [
+            {colour: "red", speed: 3, location: {path: 0, pos: 250}},
+            {colour: "blue", speed: 2.5, location: {path: 0, pos: 500}},
+            {colour: "green", speed: 2.5, location: {path: 0, pos: 750}}
+        ],
+        controllers: [
+            {type: "wait", location: {path: 0, pos: 95}, paused: false},
+            {type: "wait", location: {path: 0, pos: 910}, paused: false},
+            {type: "switch", location: {path: 0, pos: 420}, switched: false, leadsTo: {path: 0, reverse: true}},
+            {type: "switch", location: {path: 0, pos: 570}, switched: false, leadsTo: {path: 0, pos: 999, reverse: true}}
+        ],
+        scorers: [
+            {location: {path: 0, pos: 500}, points: 1}
+        ],
+        breaks: []
+    },
     
     {
         paths: [
@@ -157,26 +178,38 @@ game.LEVELS = [
         ],
         breaks: []
     },
-    
+
     {
         paths: [
-            {data: "m 1366.994,819.32225 c 194.4055,-108.0719 -160.958,-166.81269 -160.958,-335.71259 0,-168.8999 136.9204,-305.82033 305.8203,-305.82037 168.8999,-2e-5 305.8204,136.92043 305.8204,305.82037 0,168.89994 -155.3157,365.60482 -841.5809,363.30539 -686.26522,-2.29941 -873.77249,-192.10608 -873.77249,-361.00601 -1e-5,-168.89993 136.92044,-305.82038 305.82037,-305.82038 168.89993,-1e-5 305.82039,136.92045 305.82038,305.82038 0,168.89993 -261.08811,243.73655 -62.08385,340.31139", atEnd: {path: 0, pos: 565, reverse: true}, atStart: {path: 0, pos: 425, reverse: true}}
+            {data: "m 117.31475,511.12973 220.92059,-0.053 220.86771,0.053", atEnd: {path: 1, pos: 0}},
+            {data: "M 559.61772,510.63639 959.73559,112.65817", atEnd: {path: 5, pos: 0}},
+            {data: "M 559.61772,510.63639 961.87526,912.89393", atEnd: {path: 7, pos: 0}},
+            {data: "M 964.01492,112.65817 1357.7138,510.63639", atEnd: {path: 6, pos: 0}},
+            {data: "M 961.87526,908.61457 1355.5741,512.77606", atEnd: {path: 6, pos: 0}},
+            {data: "m 961.55402,112.07163 372.19158,-2 372.1915,2", atEnd: {path: 0, pos: 0}},
+            {data: "m 1357.1966,511.12973 173.992,-2 173.992,2", atEnd: {path: 0, pos: 0}},
+            {data: "m 961.66155,908.80353 371.38125,-2 371.3812,2", atEnd: {path: 0, pos: 0}}
         ],
         cells: [
-            {colour: "red", speed: 3, location: {path: 0, pos: 250}},
-            {colour: "blue", speed: 2.5, location: {path: 0, pos: 500}},
-            {colour: "green", speed: 2.5, location: {path: 0, pos: 750}}
+            {colour: "red", speed: 2.5, location: {path: 5, pos: 200}},
+            {colour: "blue", speed: 2.1, location: {path: 6, pos: 200}},
+            {colour: "green", speed: 1.7, location: {path: 7, pos: 200}}
         ],
         controllers: [
-            {type: "wait", location: {path: 0, pos: 95}, paused: false},
-            {type: "wait", location: {path: 0, pos: 910}, paused: false},
-            {type: "switch", location: {path: 0, pos: 420}, switched: false, leadsTo: {path: 0, reverse: true}},
-            {type: "switch", location: {path: 0, pos: 570}, switched: false, leadsTo: {path: 0, pos: 999, reverse: true}}
+            {type: "switch", location: {path: 0, pos: 999}, switched: false, leadsTo: {path: 2, pos: 0}},
+            {type: "switch", location: {path: 1, pos: 999}, switched: false, leadsTo: {path: 3, pos: 0}},
+            {type: "switch", location: {path: 2, pos: 999}, switched: false, leadsTo: {path: 4, pos: 0}},
+            {type: "wait", location: {path: 6, pos: 500}, paused: false},
+            {type: "teleporter", location: {path: 5, pos: 999}},
+            {type: "teleporter", location: {path: 6, pos: 999}},
+            {type: "teleporter", location: {path: 7, pos: 999}}
         ],
         scorers: [
             {location: {path: 0, pos: 500}, points: 1}
         ],
-        breaks: []
+        breaks: [
+            {location: {path: 3, pos: 500}, stage: 0}
+        ]
     },
     
     {
@@ -234,36 +267,5 @@ game.LEVELS = [
             {location: {path: 0, pos: 950}, stage: 0}
         ]
     }
-    /*
-    {
-        paths: [
-            {data: "m 228.57143,-861.0237 834.38557,-0.20017 834.1859,0.20017", atEnd: {path: 0, pos: 0}},
-            {data: "M 1899.0867,-862.887 3410.2749,-2365.994", atEnd: {path: 0, pos: 0}},
-            {data: "M 1899.0867,-862.887 3418.3561,656.3824", atEnd: {path: 0, pos: 0}},
-            {data: "M 3426.4373,-2365.994 4913.3818,-862.887", atEnd: {path: 0, pos: 0}},
-            {data: "M 3418.3561,640.2199 4905.3006,-854.8058", atEnd: {path: 0, pos: 0}},
-            {data: "m 4911.4285,-861.0237 1314.2858,0", atEnd: {path: 0, pos: 0}},
-            {data: "m 3417.1428,-2368.2093 2811.4286,0", atEnd: {path: 0, pos: 0}},
-            {data: "m 3417.549,640.93353 2805.3082,0", atEnd: {path: 0, pos: 0}}
-        ],
-        cells: [
-            {colour: "red", speed: -2.5, location: {path: 0, pos: 200}},
-            {colour: "blue", speed: -2.1, location: {path: 0, pos: 500}},
-            {colour: "green", speed: -1.7, location: {path: 0, pos: 800}}
-        ],
-        controllers: [
-            {type: "switch", location: {path: 0, pos: 377}, switched: false, leadsTo: {path: 1, pos: 0, reverse: true}},
-            {type: "switch", location: {path: 0, pos: 125}, switched: false, leadsTo: {path: 2, pos: 999}},
-            {type: "switch", location: {path: 0, pos: 30}, switched: false, leadsTo: {path: 3, pos: 0, reverse: true}},
-            {type: "teleporter", location: {path: 0, pos: 0}}
-        ],
-        scorers: [
-            {location: {path: 0, pos: 180}, points: 1},
-            {location: {path: 0, pos: 650}, points: 1}
-        ],
-        breaks: [
-            {location: {path: 0, pos: 950}, stage: 0}
-        ]
-    }
-    */
+
 ];
