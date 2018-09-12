@@ -8,7 +8,7 @@
 
     var CELL_SIZE = 22,
         TIME = 90,
-        FPS = 30,
+        FPS = 50,
     
         currentLevel,
         longestPath = 0,
@@ -357,6 +357,7 @@
             game.playSound("lose");
             
             // Monitoring game loop performance
+            /*
             (function () {
                 var min,
                     max,
@@ -377,6 +378,7 @@
                 performanceTimings = [];
 
             }());
+            */
 
             // animate
             (function () {
@@ -413,7 +415,7 @@
             (function () {
                 var CHANCE = 0.0005,
                     newBreakAdded = false;
-                if (Math.random() < CHANCE) {
+                if (currentLevel.breaks.length && Math.random() < CHANCE) {
                     currentLevel.breaks.forEach(function (lineBreak, lineBreakIndex) {
                         var newEl1,
                             newEl2,
@@ -463,7 +465,7 @@
                 }
             }());
 
-            performanceTimings.push(Date.now() - startTime);
+            //performanceTimings.push(Date.now() - startTime);
             window.setTimeout(move, 1000 / FPS);
 
         }

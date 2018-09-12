@@ -30,7 +30,7 @@ var game = game || {};
             timings = [1, 2, 3, 4, 5, 6, 7, 8];
             oscType = "triangle";
         } else if (type === "warning") {
-            pitches = [26, 26, 26, 26, 26, 26];
+            pitches = [24, 24, 24, 24, 24, 24];
             timings = [1, 3, 7, 9, 13, 15];
             oscType = "triangle";
         } else if (type === "out-of-time") {
@@ -47,7 +47,7 @@ var game = game || {};
         
         window.setTimeout(function () {
             a.close();
-        }, 2000);
+        }, 4000);
         
     };
 

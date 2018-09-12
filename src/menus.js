@@ -94,7 +94,11 @@
             }
             
             if (score >= 20) {
-                popup.innerHTML = popup.innerHTML + '<button onclick="game.initLevel(' + (game.currentLevel + 1)  + ')">Next level</button>';
+                if (game.currentLevel === game.LEVELS.length - 1) {
+                    popup.innerHTML = popup.innerHTML + '<p>This is the final level!</p>';
+                } else {
+                    popup.innerHTML = popup.innerHTML + '<button onclick="game.initLevel(' + (game.currentLevel + 1)  + ')">Next level</button>';
+                }
             } else {
                 popup.innerHTML = popup.innerHTML + '<p>You must score 20 or more points to get to the next level</p>';
             }

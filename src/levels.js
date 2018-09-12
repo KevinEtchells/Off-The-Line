@@ -75,29 +75,6 @@ game.LEVELS = [
     
     {
         paths: [
-            {data: "M 951.56373,521.02191 C 791.95957,766.46146 730.31276,904.87986 517.19808,904.87986 c -213.11468,0 -385.87826,-172.76358 -385.87827,-385.87826 0,-213.11468 172.76359,-385.87827 385.87827,-385.87827 213.11468,0 309.10664,194.98695 436.38596,385.87827", atStart: {path: 1, pos: 0, reverse: true}},
-            {data: "M 954.51152,516.96099 C 1114.1157,271.52145 1175.7625,133.10305 1388.8771,133.10305 c 213.1147,0 385.8783,172.76358 385.8783,385.87825 0,213.11468 -172.7636,385.87827 -385.8783,385.87827 -213.1146,0 -309.1066,-194.98695 -436.38588,-385.87827", atEnd: {path: 0, pos: 999, reverse: true}},
-            {data: "M 741.45196,818.02708 C 906.32888,877.27309 975.73741,1195.824 1097.0256,735.19457", atEnd: {path: 1, pos: 900}}
-        ],
-        cells: [
-            {colour: "red", speed: -1.7, location: {path: 0, pos: 250}},
-            {colour: "blue", speed: -2, location: {path: 0, pos: 750}},
-            {colour: "green", speed: 2.3, location: {path: 1, pos: 250}},
-            {colour: "yellow", speed: 2.6, location: {path: 1, pos: 700}}
-        ],
-        controllers: [
-            {type: "switch", location: {path: 0, pos: 150}, switched: false, leadsTo: {path: 2, pos: 0, reverse: true}},
-            {type: "wait", location: {path: 1, pos: 500}, paused: false}
-        ],
-        scorers: [
-            {location: {path: 0, pos: 50}, points: 1}
-        ],
-        breaks: []
-    },
-
-    
-    {
-        paths: [
             {data: "m 790.202,680.67096 c -19.7904,169.6321 -163.3914,297.6138 -334.1739,297.8262 -186.0432,-5e-4 -336.8608,-150.8182 -336.8613,-336.86134 -6e-4,-186.04391 150.8174,-336.86275 336.8613,-336.86329 57.5037,0.1403 114.0143,14.99865 164.1504,43.16016", atStart: {path: 1, pos: 370, reverse: true}},
             {data: "M 1293.7365,385.02833 A 336.86227,336.86227 0 0 1 956.87425,721.8906 336.86227,336.86227 0 0 1 620.01197,385.02833 336.86227,336.86227 0 0 1 956.87425,48.166055 336.86227,336.86227 0 0 1 1293.7365,385.02833 Z", atEnd: {path: 1, pos: 0}},
             {data: "m 1119.8747,680.67139 c 19.7904,169.6321 163.3914,297.6138 334.1739,297.8262 186.0432,-5e-4 336.8608,-150.8182 336.8613,-336.86134 6e-4,-186.04391 -150.8174,-336.86274 -336.8613,-336.86328 -57.5037,0.1403 -114.0143,14.99865 -164.1504,43.16016", atEnd: {path: 1, pos: 980}}
@@ -156,10 +133,10 @@ game.LEVELS = [
             {data: "M 1779.7365,753.44001 1618.7784,463.71546", atStart: {path: 0, pos: 999}}
         ],
         cells: [
-            {colour: "red", speed: -1.8, location: {path: 0, pos: 500}},
+            {colour: "red", speed: -1.7, location: {path: 0, pos: 500}},
             {colour: "blue", speed: 2, location: {path: 1, pos: 500}},
-            {colour: "green", speed: 2.2, location: {path: 2, pos: 500}},
-            {colour: "yellow", speed: 2.4, location: {path: 3, pos: 500}}
+            {colour: "green", speed: 2.3, location: {path: 2, pos: 500}},
+            {colour: "yellow", speed: 2.6, location: {path: 3, pos: 500}}
         ],
         controllers: [
             {type: "switch", location: {path: 5, pos: 700}, switched: false, leadsTo: {path: 6, pos: 999, reverse: true}},
@@ -178,6 +155,29 @@ game.LEVELS = [
         ],
         breaks: []
     },
+    
+    {
+        paths: [
+            {data: "M 951.56373,521.02191 C 791.95957,766.46146 730.31276,904.87986 517.19808,904.87986 c -213.11468,0 -385.87826,-172.76358 -385.87827,-385.87826 0,-213.11468 172.76359,-385.87827 385.87827,-385.87827 213.11468,0 309.10664,194.98695 436.38596,385.87827", atStart: {path: 1, pos: 0, reverse: true}},
+            {data: "M 954.51152,516.96099 C 1114.1157,271.52145 1175.7625,133.10305 1388.8771,133.10305 c 213.1147,0 385.8783,172.76358 385.8783,385.87825 0,213.11468 -172.7636,385.87827 -385.8783,385.87827 -213.1146,0 -309.1066,-194.98695 -436.38588,-385.87827", atEnd: {path: 0, pos: 999, reverse: true}},
+            {data: "M 741.45196,818.02708 C 906.32888,877.27309 975.73741,1195.824 1097.0256,735.19457", atEnd: {path: 1, pos: 900}}
+        ],
+        cells: [
+            {colour: "red", speed: -1.7, location: {path: 0, pos: 250}},
+            {colour: "blue", speed: -2, location: {path: 0, pos: 750}},
+            {colour: "green", speed: 2.3, location: {path: 1, pos: 250}},
+            {colour: "yellow", speed: 2.6, location: {path: 1, pos: 700}}
+        ],
+        controllers: [
+            {type: "switch", location: {path: 0, pos: 150}, switched: false, leadsTo: {path: 2, pos: 0, reverse: true}},
+            {type: "wait", location: {path: 1, pos: 500}, paused: false}
+        ],
+        scorers: [
+            {location: {path: 0, pos: 50}, points: 2}
+        ],
+        breaks: []
+    },
+
 
     {
         paths: [
@@ -214,6 +214,33 @@ game.LEVELS = [
     
     {
         paths: [
+            {data: "m 1031.5314,569.62254 c 1.7481,36.56817 -40.90513,54.1561 -71.42852,47.61911 -54.5992,-11.69314 -77.72863,-74.41767 -61.90487,-123.80947 23.22201,-72.48446 108.32599,-101.83687 176.19039,-76.19062 90.4527,34.1824 126.1636,142.36698 90.4764,228.57135 -44.9087,108.4794 -176.4694,150.6013 -280.95229,104.76214 C 757.36974,695.05767 708.80955,539.96901 764.86462,417.24181 830.92357,272.61206 1009.6285,217.59713 1150.5788,283.90816 1313.3114,360.46687 1374.7919,562.84417 1298.1982,722.00327 1211.1675,902.84995 985.08012,970.80361 807.72215,883.90844 608.75331,786.4252 534.32103,536.60099 631.53122,341.05145 739.45296,123.9544 1013.0336,43.039351 1226.7692,150.57476", atStart: {path: 0, pos: 999}},
+            {data: "M 883.68475,291.5259 C 742.53049,275.16153 895.52537,200.72924 762.51341,187.6548", atEnd: {path: 0, pos: 880, reverse: true}},
+            {data: "m 1225.3955,334.24954 c 0.9644,134.097 -92.647,-1.89579 -89.3823,124.22781", atStart: {path: 0, pos: 455}},
+            {data: "M 940.01646,610.00756 C 1036.4959,715.69358 870.11654,670.873 962.60383,768.6878", atEnd: {path: 0, pos: 205, reverse: true}}
+        ],
+        cells: [
+            {colour: "red", speed: -2.5, location: {path: 0, pos: 200}},
+            {colour: "blue", speed: -2.1, location: {path: 0, pos: 500}},
+            {colour: "green", speed: -1.7, location: {path: 0, pos: 800}}
+        ],
+        controllers: [
+            {type: "switch", location: {path: 0, pos: 377}, switched: false, leadsTo: {path: 1, pos: 0, reverse: true}},
+            {type: "switch", location: {path: 0, pos: 125}, switched: false, leadsTo: {path: 2, pos: 999}},
+            {type: "switch", location: {path: 0, pos: 40}, switched: false, leadsTo: {path: 3, pos: 0, reverse: true}},
+            {type: "teleporter", location: {path: 0, pos: 0}}
+        ],
+        scorers: [
+            {location: {path: 0, pos: 180}, points: 1},
+            {location: {path: 0, pos: 650}, points: 1}
+        ],
+        breaks: [
+            {location: {path: 0, pos: 950}, stage: 0}
+        ]
+    },
+    
+    {
+        paths: [
             {data: "m 108.57143,509.50502 868.57144,2.85714 834.28573,-2.85714", atEnd: {path: 0, pos: 0}},
             {data: "m 346.42062,510.4839 99.29371,-329.56205 99.2937,329.56206", atEnd: {path: 0, pos: 300}},
             {data: "m 689.65867,511.65822 99.29371,329.56205 99.29369,-329.56206", atEnd: {path: 0, pos: 500}},
@@ -238,33 +265,6 @@ game.LEVELS = [
         breaks: [
             {location: {path: 2, pos: 750}, stage: 0},
             {location: {path: 4, pos: 750}, stage: 0}
-        ]
-    },
-    
-    {
-        paths: [
-            {data: "m 1031.5314,569.62254 c 1.7481,36.56817 -40.90513,54.1561 -71.42852,47.61911 -54.5992,-11.69314 -77.72863,-74.41767 -61.90487,-123.80947 23.22201,-72.48446 108.32599,-101.83687 176.19039,-76.19062 90.4527,34.1824 126.1636,142.36698 90.4764,228.57135 -44.9087,108.4794 -176.4694,150.6013 -280.95229,104.76214 C 757.36974,695.05767 708.80955,539.96901 764.86462,417.24181 830.92357,272.61206 1009.6285,217.59713 1150.5788,283.90816 1313.3114,360.46687 1374.7919,562.84417 1298.1982,722.00327 1211.1675,902.84995 985.08012,970.80361 807.72215,883.90844 608.75331,786.4252 534.32103,536.60099 631.53122,341.05145 739.45296,123.9544 1013.0336,43.039351 1226.7692,150.57476", atStart: {path: 0, pos: 999}},
-            {data: "M 883.68475,291.5259 C 742.53049,275.16153 895.52537,200.72924 762.51341,187.6548", atEnd: {path: 0, pos: 880, reverse: true}},
-            {data: "m 1225.3955,334.24954 c 0.9644,134.097 -92.647,-1.89579 -89.3823,124.22781", atStart: {path: 0, pos: 455}},
-            {data: "M 940.01646,610.00756 C 1036.4959,715.69358 870.11654,670.873 962.60383,768.6878", atEnd: {path: 0, pos: 205, reverse: true}}
-        ],
-        cells: [
-            {colour: "red", speed: -2.5, location: {path: 0, pos: 200}},
-            {colour: "blue", speed: -2.1, location: {path: 0, pos: 500}},
-            {colour: "green", speed: -1.7, location: {path: 0, pos: 800}}
-        ],
-        controllers: [
-            {type: "switch", location: {path: 0, pos: 377}, switched: false, leadsTo: {path: 1, pos: 0, reverse: true}},
-            {type: "switch", location: {path: 0, pos: 125}, switched: false, leadsTo: {path: 2, pos: 999}},
-            {type: "switch", location: {path: 0, pos: 30}, switched: false, leadsTo: {path: 3, pos: 0, reverse: true}},
-            {type: "teleporter", location: {path: 0, pos: 0}}
-        ],
-        scorers: [
-            {location: {path: 0, pos: 180}, points: 1},
-            {location: {path: 0, pos: 650}, points: 1}
-        ],
-        breaks: [
-            {location: {path: 0, pos: 950}, stage: 0}
         ]
     }
 

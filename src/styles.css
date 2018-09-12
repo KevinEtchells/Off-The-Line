@@ -16,11 +16,12 @@ p {font-size: 3vw;}
 .top-score {font-size: 0.8em; font-weight: 100; margin-bottom: 0; margin-top: 5px;}
 h3 {font-size: 4.5vw; margin-bottom: 0;}
 .credits p {margin-top: 5px;}
+.social-media {margin-bottom: 0;}
 
 .tutorial {padding: 4vw; text-align: left; width: 92vw;}
 .tutorial h2 {text-align: center;}
 .tutorial ul {list-style-type: none; margin-top: 0; padding: 0;}
-.tutorial li {align-items: center; display: flex; margin-bottom: 1vw;}
+.tutorial li {align-items: center; display: flex; list-style-type: none; margin-bottom: 1vw;}
 .tutorial li div {width: 10vw;}
 .demo-button {border: 1px solid white; font-size: 1.7vw; height: 8vw; margin: 0; padding: 0; width: 8vw;}
 .demo-teleporter {border: 1px solid pink; font-size: 0.8vw; height: 5vw; margin: 0; padding: 0; width: 5vw;}
@@ -30,6 +31,7 @@ h3 {font-size: 4.5vw; margin-bottom: 0;}
 hr {opacity: 0.3;}
 
 .levels ul {display: flex; flex-wrap: wrap; justify-content: center; list-style-type: none; padding: 0;}
+.levels li {list-style-type: none;}
 .levels svg {max-height: 150px;}
 
 .plus20 {display: none; left: 0; position: absolute; opacity: 0; text-align: center; top: 20vh; transition: opacity 1s; width: 100vw;}
@@ -81,5 +83,5 @@ path {stroke-width: 3px;}
     h3 {font-size: 2.5vw;}
     p {font-size: 2vw;}
     .levels ul {justify-content: flex-start;}
-    .level-button {font-size: 2vw; width: 23vw;}
+    .level-button {font-size: 2vw; /*width: 23vw;*/}
 }
